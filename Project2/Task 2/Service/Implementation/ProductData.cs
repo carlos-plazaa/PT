@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Service.DTO
 {
-    public class ProductDTO
+    public class ProductData
     {
         public int ProductID { get; set; }
         public decimal Price { get; set; }

@@ -22,14 +22,14 @@ namespace Service.CRUD
             this.dataLayer = dataLayer;
         }
 
-        private ProductDTO Map(InterfaceProduct product)
+        private ProductData Map(InterfaceProduct product)
         {
             if (product == null)
             {
                 return null;
             }
 
-            return new ProductDTO
+            return new ProductData
             {
                 ProductID = product.ProductID,
                 Price = product.Price,
@@ -57,15 +57,15 @@ namespace Service.CRUD
             dataLayer.UpdateProductCategory(id, category);
         }
 
-        public ProductDTO GetProduct(int id)
+        public ProductData GetProduct(int id)
         {
             return Map(dataLayer.GetProduct(id));
         }
 
-        public IEnumerable<ProductDTO> GetAllProducts()
+        public IEnumerable<ProductData> GetAllProducts()
         {
             var clients = dataLayer.GetAllProducts();
-            var result = new List<ProductDTO>();
+            var result = new List<ProductData>();
 
             foreach (var client in clients)
             {

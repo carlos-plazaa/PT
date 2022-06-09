@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Service.DTO
 {
-    public class EventDTO
+    public class EventData
     {
         public int EventID { get; set; }
-        public int ClientID { get; set; }
+        public int UserID { get; set; }
         public int ProductID { get; set; }
         public DateTime PurchaseDate { get; set; }
     }

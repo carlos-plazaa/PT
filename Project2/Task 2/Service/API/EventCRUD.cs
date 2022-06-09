@@ -22,25 +22,25 @@ namespace Service.CRUD
             this.dataLayer = dataLayer;
         }
 
-        private EventDTO Map(InterfaceEvent e)
+        private EventData Map(InterfaceEvent e)
         {
             if (e == null)
             {
                 return null;
             }
 
-            return new EventDTO
+            return new EventData
             {
                 EventID = e.EventID,
-                ClientID = e.ClientID,
+                UserID = e.UserID,
                 ProductID = e.ProductID,
                 PurchaseDate = e.PurchaseDate
             };
         }
 
-        public void AddEvent(int clientId, int productId, DateTime purchaseDate)
+        public void AddEvent(int userId, int productId, DateTime purchaseDate)
         {
-            dataLayer.AddEvent(clientId, productId, purchaseDate);
+            dataLayer.AddEvent(userId, productId, purchaseDate);
         }
 
         public void DeleteEvent(int id)
@@ -48,9 +48,9 @@ namespace Service.CRUD
             dataLayer.DeleteEvent(id);
         }
 
-        public void UpdateEventClient(int id, int clientId)
+        public void UpdateEventClient(int id, int userId)
         {
-            dataLayer.UpdateEventClient(id, clientId);
+            dataLayer.UpdateEventClient(id, userId);
         }
 
         public void UpdateEventProduct(int id, int productId)
@@ -63,15 +63,15 @@ namespace Service.CRUD
             dataLayer.UpdateEventPurchaseDate(id, purchaseDate); 
         }
 
-        public EventDTO GetEvent(int id)
+        public EventData GetEvent(int id)
         {
             return Map(dataLayer.GetEvent(id));
         }
 
-        public IEnumerable<EventDTO> GetAllEvents()
+        public IEnumerable<EventData> GetAllEvents()
         {
             var clients = dataLayer.GetAllEvents();
-            var result = new List<EventDTO>();
+            var result = new List<EventData>();
 
             foreach (var client in clients)
             {

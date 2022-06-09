@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.CRUD
+namespace Service.API
 {
     public class ClientCRUD
     {
@@ -22,14 +22,14 @@ namespace Service.CRUD
             this.dataLayer = dataLayer;
         }
 
-        private ClientDTO Map(InterfaceUser client)
+        private ClientData Map(InterfaceUser client)
         {
             if (client == null)
             {
                 return null;
             }
 
-            return new ClientDTO
+            return new ClientData
             {
                 UserID = client.UserID,
                 Name = client.Name,
@@ -57,15 +57,15 @@ namespace Service.CRUD
             dataLayer.UpdateClientSurname(id, surname);
         }
 
-        public ClientDTO GetClient(int id)
+        public ClientData GetClient(int id)
         {
             return Map(dataLayer.GetClient(id));
         }
 
-        public IEnumerable<ClientDTO> GetAllClients()
+        public IEnumerable<ClientData> GetAllClients()
         {
             var clients = dataLayer.GetAllClients();
-            var result = new List<ClientDTO>();
+            var result = new List<ClientData>();
 
             foreach (var client in clients)
             {
