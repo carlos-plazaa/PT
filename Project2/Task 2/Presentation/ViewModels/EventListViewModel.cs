@@ -62,7 +62,7 @@ namespace Presentation.ViewModels
 
             foreach (var e in service.GetAllEvents())
             {
-                eventViewModels.Add(new EventItemViewModel(e.EventID, e.ClientID, e.ProductID, e.PurchaseDate));
+                eventViewModels.Add(new EventItemViewModel(e.EventID, e.UserID, e.ProductID, e.PurchaseDate));
             }
 
             OnPropertyChanged(nameof(eventViewModels));
