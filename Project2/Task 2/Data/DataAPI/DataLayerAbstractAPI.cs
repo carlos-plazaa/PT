@@ -13,14 +13,17 @@ namespace Data
         public abstract void UpdateClientSurname(int id, string surname);
         public abstract InterfaceUser GetClient(int id);
         public abstract IEnumerable<InterfaceUser> GetAllClients();
-        //////////////////////////////////////////
+
+        //Product
         public abstract void AddProduct(decimal price, string category);
         public abstract void DeleteProduct(int id);
         public abstract void UpdateProductPrice(int id, decimal price);
         public abstract void UpdateProductCategory(int id, string category);
         public abstract InterfaceProduct GetProduct(int id);
         public abstract IEnumerable<InterfaceProduct> GetAllProducts();
-        //////////////////////////////////////////
+
+
+        //Event
         public abstract void AddEvent(int clientId, int productId, DateTime purchaseDate);
         public abstract void DeleteEvent(int id);
         public abstract void UpdateEventClient(int id, int clientId);
@@ -102,7 +105,8 @@ namespace Data
                 return clients;
             }
 
-            //////////////////////////////////////////
+
+            //Product
             public override void AddProduct(decimal price, string category)
             {
                 var product = new Product
@@ -151,7 +155,9 @@ namespace Data
 
                 return products;
             }
-            //////////////////////////////////////////
+
+
+            //Event
             public override void AddEvent(int clientId, int productId, DateTime purchaseDate)
             {
                 Event newEvent = new Event

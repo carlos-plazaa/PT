@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Presentation.ViewModels.MVVNLight;
-using Service.API;
+using Service.Data;
 using Service.CRUD;
 
 namespace Presentation.ViewModels

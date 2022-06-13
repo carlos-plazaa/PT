@@ -31,15 +31,5 @@ namespace TestPresentation
             Assert.IsTrue(viewModel.CanUpdate);
         }
 
-        [TestMethod]
-        public void ChangeTest()
-        {
-            DateTime date = new DateTime(2005, 03, 06);
-            EventItemViewModel viewModel = new EventItemViewModel(10, 20, 15, date);
-
-            viewModel.ClientID = 5;
-
-            Assert.AreEqual(5, viewModel.ClientID);
-        }
     }
 }

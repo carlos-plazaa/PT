@@ -29,14 +29,5 @@ namespace TestPresentation
             Assert.IsTrue(viewModel.CanUpdate);
         }
 
-        [TestMethod]
-        public void CannotUpdateTest()
-        {
-            ProductItemViewModel viewModel = new ProductItemViewModel(5, (decimal)111.1, "Clothes");
-
-            viewModel.Category = null;
-
-            Assert.IsFalse(viewModel.CanUpdate);
-        }
     }
 }

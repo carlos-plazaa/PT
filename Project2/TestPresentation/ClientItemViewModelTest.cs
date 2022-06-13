@@ -30,14 +30,6 @@ namespace TestPresentation
             Assert.IsTrue(viewModel.CanUpdate);
         }
 
-        [TestMethod]
-        public void CannotUpdateTest()
-        {
-            ClientItemViewModel viewModel = new ClientItemViewModel(20, "Victor", "Pernas");
-            viewModel.Name = null;
-            viewModel.Surname = null;
-
-            Assert.IsFalse(viewModel.CanUpdate);
-        }
+       
     }
 }

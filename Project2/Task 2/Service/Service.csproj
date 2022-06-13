@@ -41,12 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\ClientCRUD.cs" />
-    <Compile Include="API\EventCRUD.cs" />
-    <Compile Include="API\ProductCRUD.cs" />
-    <Compile Include="Implementation\ClientData.cs" />
-    <Compile Include="Implementation\EventData.cs" />
-    <Compile Include="Implementation\ProductData.cs" />
+    <Compile Include="CRUD\ClientCRUD.cs" />
+    <Compile Include="CRUD\EventCRUD.cs" />
+    <Compile Include="CRUD\ProductCRUD.cs" />
+    <Compile Include="Data\ClientData.cs" />
+    <Compile Include="Data\EventData.cs" />
+    <Compile Include="Data\ProductData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

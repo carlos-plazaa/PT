@@ -1,12 +1,12 @@
 ﻿using Data;
-using Service.DTO;
+using Service.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.API
+namespace Service.CRUD
 {
     public class ClientCRUD
     {
