@@ -20,7 +20,7 @@ namespace TestPresentation
                 ClientViewModels = new ObservableCollection<ClientItemViewModel>
                 {
                     new ClientItemViewModel(1, "Carlos", "Plaza"),
-                    new ClientItemViewModel(2, "Carlos", "Plaza")
+                    new ClientItemViewModel(2, "Victor ", "Pernas")
                 }
             };
         }

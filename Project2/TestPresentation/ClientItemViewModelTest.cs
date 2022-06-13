@@ -17,7 +17,7 @@ namespace TestPresentation
         {
             ClientItemViewModel viewModel = new ClientItemViewModel(10, "Carlos", "Plaza");
 
-            Assert.AreEqual(5, viewModel.ClientID);
+            Assert.AreEqual(10, viewModel.ClientID);
             Assert.AreEqual("Carlos", viewModel.Name);
             Assert.AreEqual("Plaza", viewModel.Surname);
         }

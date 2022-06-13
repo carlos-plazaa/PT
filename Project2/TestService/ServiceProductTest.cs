@@ -29,9 +29,9 @@ namespace TestService
             ProductCRUD productService = new ProductCRUD(new TestDataLayerAPI());
 
             productService.AddProduct(10, "Book");
-            productService.UpdateProductCategory(1, "books");
+            productService.UpdateProductCategory(1, "Book");
 
-            Assert.AreEqual(productService.GetProduct(1).Category, "books");
+            Assert.AreEqual(productService.GetProduct(1).Category, "Book");
 
             productService.DeleteProduct(1);
         }

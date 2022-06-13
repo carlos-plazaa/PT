@@ -14,7 +14,7 @@ namespace TestPresentation
         [TestMethod]
         public void ConstructorTest()
         {
-            DateTime date = new DateTime(2005, 03, 06);
+            DateTime date = new DateTime(2000, 03, 06);
             EventItemViewModel viewModel = new EventItemViewModel(10, 20, 15, date);
 
             Assert.AreEqual(10, viewModel.EventID);
@@ -25,7 +25,7 @@ namespace TestPresentation
         [TestMethod]
         public void CanUpdateTest()
         {
-            DateTime date = new DateTime(2005, 03, 06);
+            DateTime date = new DateTime(2000, 03, 06);
             EventItemViewModel viewModel = new EventItemViewModel(10, 20, 15, date);
 
             Assert.IsTrue(viewModel.CanUpdate);
